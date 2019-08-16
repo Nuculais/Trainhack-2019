@@ -1,25 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  useView,
+  useCurrentRoute,
+  NotFoundBoundary,
+} from 'react-navi';
 
-function App() {
+import ErrorBoundary from './components/ErrorBoundary';
+import NotFoundView from './views/NotFoundView';
+
+import './App.scss';
+
+const App = (props) => {
+  const view = useView();
+  // const route = useCurrentRoute();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <React.Suspense fallback={<div>Hello!</div>}>
+      <ErrorBoundary
+        render={
+          (error, errorInfo) => (
+            <div>
+              {error.message}
+            </div>
+          )
+        }
+      >
+        {view.content.main}
+        {/* <NotFoundBoundary
+          render={() => null}
+          // render={
+          //   (error) => (
+          //     <NotFoundView
+          //       error={error}
+          //       // {...props}
+          //     />
+          //   )
+          // }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {view.content.main}
+        </NotFoundBoundary> */}
+      </ErrorBoundary>
+    </React.Suspense>
   );
 }
 
