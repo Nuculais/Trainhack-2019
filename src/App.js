@@ -25,20 +25,18 @@ const App = (props) => {
           )
         }
       >
-        {view.content.main}
-        {/* <NotFoundBoundary
-          render={() => null}
-          // render={
-          //   (error) => (
-          //     <NotFoundView
-          //       error={error}
-          //       // {...props}
-          //     />
-          //   )
-          // }
+        <NotFoundBoundary
+          render={
+            (error) => (
+              <NotFoundView
+                error={error}
+                // {...props}
+              />
+            )
+          }
         >
-          {view.content.main}
-        </NotFoundBoundary> */}
+          {view.content}
+        </NotFoundBoundary>
       </ErrorBoundary>
     </React.Suspense>
   );
