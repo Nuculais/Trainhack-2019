@@ -1,0 +1,186 @@
+{
+  "livemap": {
+    "vehicles": [
+      {
+        "x": "11964112",
+        "y": "57702639",
+        "name": "Spå 2",
+        "gid": "9015014500204209",
+        "lcolor": "#fff014",
+        "bcolor": "#00394d",
+        "direction": "8",
+        "prodclass": "TRAM",
+        "delay": "0"
+      },
+      {
+        "x": "11963321",
+        "y": "57705695",
+        "name": "Spå 2",
+        "gid": "9015014500204207",
+        "lcolor": "#fff014",
+        "bcolor": "#00394d",
+        "direction": "3",
+        "prodclass": "TRAM",
+        "delay": "3"
+      },
+      {
+        "x": "11956660",
+        "y": "57702423",
+        "name": "Bus 291",
+        "gid": "9015014629100046",
+        "lcolor": "#00A5DC",
+        "bcolor": "#ffffff",
+        "direction": "19",
+        "prodclass": "BUS",
+        "delay": "-1"
+      },
+      {
+        "x": "11963447",
+        "y": "57704679",
+        "name": "Spå 11",
+        "gid": "9015014501104108",
+        "lcolor": "#000000",
+        "bcolor": "#ffffff",
+        "direction": "20",
+        "prodclass": "TRAM",
+        "delay": "1"
+      },
+      {
+        "x": "11964112",
+        "y": "57702639",
+        "name": "Spå 2",
+        "gid": "9015014500204209",
+        "lcolor": "#fff014",
+        "bcolor": "#00394d",
+        "direction": "8",
+        "prodclass": "TRAM",
+        "delay": "0"
+      },
+      {
+        "x": "11963321",
+        "y": "57705695",
+        "name": "Spå 2",
+        "gid": "9015014500204207",
+        "lcolor": "#fff014",
+        "bcolor": "#00394d",
+        "direction": "3",
+        "prodclass": "TRAM",
+        "delay": "3"
+      },
+      {
+        "x": "11965613",
+        "y": "57701956",
+        "name": "Bus 16",
+        "gid": "9015014501600184",
+        "lcolor": "#00b6f1",
+        "bcolor": "#ffffff",
+        "direction": "11",
+        "prodclass": "BUS"
+      },
+      {
+        "x": "11965164",
+        "y": "57702252",
+        "name": "Bus 16",
+        "gid": "9015014501600185",
+        "lcolor": "#00b6f1",
+        "bcolor": "#ffffff",
+        "direction": "27",
+        "prodclass": "BUS",
+        "delay": "4"
+      },
+      {
+        "x": "11955491",
+        "y": "57703295",
+        "name": "Bus 60",
+        "gid": "9015014506000142",
+        "lcolor": "#00b6f1",
+        "bcolor": "#ffffff",
+        "direction": "5",
+        "prodclass": "BUS",
+        "delay": "1"
+      },
+      {
+        "x": "11957469",
+        "y": "57705704",
+        "name": "Spå 9",
+        "gid": "9015014500904102",
+        "lcolor": "#b9e2f8",
+        "bcolor": "#00394d",
+        "direction": "21",
+        "prodclass": "TRAM",
+        "delay": "3"
+      },
+      {
+        "x": "11952938",
+        "y": "57702486",
+        "name": "Röd express",
+        "gid": "9015014620100125",
+        "lcolor": "#cd1432",
+        "bcolor": "#ffffff",
+        "direction": "19",
+        "prodclass": "BUS",
+        "delay": "4"
+      },
+      {
+        "x": "11956193",
+        "y": "57703825",
+        "name": "Rosa express",
+        "gid": "9015014521300153",
+        "lcolor": "#e89dc0",
+        "bcolor": "#ffffff",
+        "direction": "5",
+        "prodclass": "BUS",
+        "delay": "1"
+      },
+      {
+        "x": "11958386",
+        "y": "57706172",
+        "name": "Bus 50",
+        "gid": "9015014505000148",
+        "lcolor": "#00b6f1",
+        "bcolor": "#ffffff",
+        "direction": "17",
+        "prodclass": "BUS",
+        "delay": "1"
+      },
+      {
+        "x": "11958062",
+        "y": "57705839",
+        "name": "Röd express",
+        "gid": "9015014620100120",
+        "lcolor": "#cd1432",
+        "bcolor": "#ffffff",
+        "direction": "4",
+        "prodclass": "BUS",
+        "delay": "-2"
+      },
+      {
+        "x": "11963456",
+        "y": "57704670",
+        "name": "Spå 6",
+        "gid": "9015014500604107",
+        "lcolor": "#fa8719",
+        "bcolor": "#00394d",
+        "direction": "20",
+        "prodclass": "TRAM",
+        "delay": "1"
+      },
+      {
+        "x": "11957945",
+        "y": "57705884",
+        "name": "Spå 9",
+        "gid": "9015014500904101",
+        "lcolor": "#b9e2f8",
+        "bcolor": "#00394d",
+        "direction": "0",
+        "prodclass": "TRAM",
+        "delay": "4"
+      }
+    ],
+    "time": "15:15:30",
+    "minx": "11952770",
+    "maxx": "11965620",
+    "miny": "57701940",
+    "maxy": "57708535"
+  }
+}

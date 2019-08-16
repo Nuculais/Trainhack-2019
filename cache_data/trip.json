@@ -1,0 +1,656 @@
+{
+  "TripList": {
+    "noNamespaceSchemaLocation": "http://api.vasttrafik.se/v1/hafasRestTrip.xsd",
+    "servertime": "15:40",
+    "serverdate": "2019-08-16",
+    "Trip": [
+      {
+        "Leg": [
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Centralstationen, Göteborg",
+              "type": "ST",
+              "id": "9022014001950005",
+              "time": "15:47",
+              "date": "2019-08-16",
+              "track": "E",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "time": "15:51",
+              "date": "2019-08-16",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Öresundståg",
+            "sname": "TÅG",
+            "journeyNumber": "1093",
+            "type": "REG",
+            "id": "9015030110101093",
+            "direction": "Malmö Köpenhamn",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "routeIdx": "0",
+              "time": "15:55",
+              "date": "2019-08-16",
+              "rtTime": "15:55",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "routeIdx": "2",
+              "time": "16:13",
+              "date": "2019-08-16",
+              "track": "2",
+              "rtTime": "16:13",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=847740%2F292735%2F926966%2F180904%2F80%3Fdate%3D2019-08-16%26station_evaId%3D8000014%26station_type%3Ddep%26format%3Djson%26"
+            }
+          },
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "time": "16:18",
+              "date": "2019-08-16",
+              "track": "2",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "time": "16:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Buss 2",
+            "sname": "2",
+            "journeyNumber": "38",
+            "type": "BUS",
+            "id": "9015014675200038",
+            "direction": "Hede station",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "accessibility": "wheelChair",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "routeIdx": "4",
+              "time": "16:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "rtTime": "16:18",
+              "rtDate": "2019-08-16",
+              "Notes": {
+                "Note": {
+                  "key": "disruption-message",
+                  "severity": "normal",
+                  "priority": "1",
+                  "$": "Linje 2 och 720 stannar inte vid Kungsmässan. Närmaste hållplats är Kungsbacka station. Detta gäller från 15 maj klockan 23:00 till 15 maj 2020. Orsaken är vägarbete."
+                }
+              }
+            },
+            "Destination": {
+              "name": "Kungsbacka sjukhus, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019135001",
+              "routeIdx": "7",
+              "time": "16:22",
+              "date": "2019-08-16",
+              "track": "A",
+              "rtTime": "16:22",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=758523%2F277255%2F792164%2F143252%2F80%3Fdate%3D2019-08-16%26station_evaId%3D19110012%26station_type%3Ddep%26format%3Djson%26"
+            }
+          }
+        ]
+      },
+      {
+        "Leg": [
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Centralstationen, Göteborg",
+              "type": "ST",
+              "id": "9022014001950005",
+              "time": "16:17",
+              "date": "2019-08-16",
+              "track": "E",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "time": "16:21",
+              "date": "2019-08-16",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Öresundståg",
+            "sname": "TÅG",
+            "journeyNumber": "20175",
+            "type": "REG",
+            "id": "9015030110120175",
+            "direction": "Halmstad",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "routeIdx": "0",
+              "time": "16:25",
+              "date": "2019-08-16",
+              "rtTime": "16:25",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "routeIdx": "2",
+              "time": "16:43",
+              "date": "2019-08-16",
+              "track": "2",
+              "rtTime": "16:43",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=257271%2F86007%2F436590%2F132538%2F80%3Fdate%3D2019-08-16%26station_evaId%3D8000014%26station_type%3Ddep%26format%3Djson%26"
+            }
+          },
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "time": "16:48",
+              "date": "2019-08-16",
+              "track": "2",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "time": "16:48",
+              "date": "2019-08-16",
+              "track": "H",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Buss 2",
+            "sname": "2",
+            "journeyNumber": "40",
+            "type": "BUS",
+            "id": "9015014675200040",
+            "direction": "Hede station",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "accessibility": "wheelChair",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "routeIdx": "4",
+              "time": "16:48",
+              "date": "2019-08-16",
+              "track": "H",
+              "rtTime": "16:48",
+              "rtDate": "2019-08-16",
+              "Notes": {
+                "Note": {
+                  "key": "disruption-message",
+                  "severity": "normal",
+                  "priority": "1",
+                  "$": "Linje 2 och 720 stannar inte vid Kungsmässan. Närmaste hållplats är Kungsbacka station. Detta gäller från 15 maj klockan 23:00 till 15 maj 2020. Orsaken är vägarbete."
+                }
+              }
+            },
+            "Destination": {
+              "name": "Kungsbacka sjukhus, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019135001",
+              "routeIdx": "7",
+              "time": "16:52",
+              "date": "2019-08-16",
+              "track": "A",
+              "rtTime": "16:52",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=453288%2F175516%2F602116%2F149964%2F80%3Fdate%3D2019-08-16%26station_evaId%3D19110012%26station_type%3Ddep%26format%3Djson%26"
+            }
+          }
+        ]
+      },
+      {
+        "Leg": [
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Centralstationen, Göteborg",
+              "type": "ST",
+              "id": "9022014001950005",
+              "time": "16:47",
+              "date": "2019-08-16",
+              "track": "E",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "time": "16:51",
+              "date": "2019-08-16",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Öresundståg",
+            "sname": "TÅG",
+            "journeyNumber": "1099",
+            "type": "REG",
+            "id": "9015030110101099",
+            "direction": "Malmö Köpenhamn",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "routeIdx": "0",
+              "time": "16:55",
+              "date": "2019-08-16",
+              "rtTime": "16:55",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "routeIdx": "2",
+              "time": "17:13",
+              "date": "2019-08-16",
+              "track": "2",
+              "rtTime": "17:13",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=613299%2F214589%2F132814%2F138026%2F80%3Fdate%3D2019-08-16%26station_evaId%3D8000014%26station_type%3Ddep%26format%3Djson%26"
+            }
+          },
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "time": "17:18",
+              "date": "2019-08-16",
+              "track": "2",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "time": "17:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Buss 2",
+            "sname": "2",
+            "journeyNumber": "42",
+            "type": "BUS",
+            "id": "9015014675200042",
+            "direction": "Hede station",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "routeIdx": "4",
+              "time": "17:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "rtTime": "17:18",
+              "rtDate": "2019-08-16",
+              "Notes": {
+                "Note": {
+                  "key": "disruption-message",
+                  "severity": "normal",
+                  "priority": "1",
+                  "$": "Linje 2 och 720 stannar inte vid Kungsmässan. Närmaste hållplats är Kungsbacka station. Detta gäller från 15 maj klockan 23:00 till 15 maj 2020. Orsaken är vägarbete."
+                }
+              }
+            },
+            "Destination": {
+              "name": "Kungsbacka sjukhus, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019135001",
+              "routeIdx": "7",
+              "time": "17:22",
+              "date": "2019-08-16",
+              "track": "A",
+              "rtTime": "17:22",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=595497%2F222913%2F806914%2F204970%2F80%3Fdate%3D2019-08-16%26station_evaId%3D19110012%26station_type%3Ddep%26format%3Djson%26"
+            }
+          }
+        ]
+      },
+      {
+        "Leg": [
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Centralstationen, Göteborg",
+              "type": "ST",
+              "id": "9022014001950005",
+              "time": "17:17",
+              "date": "2019-08-16",
+              "track": "E",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "time": "17:21",
+              "date": "2019-08-16",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Öresundståg",
+            "sname": "TÅG",
+            "journeyNumber": "20177",
+            "type": "REG",
+            "id": "9015030110120177",
+            "direction": "Halmstad",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "routeIdx": "0",
+              "time": "17:25",
+              "date": "2019-08-16",
+              "rtTime": "17:25",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "routeIdx": "2",
+              "time": "17:43",
+              "date": "2019-08-16",
+              "track": "2",
+              "rtTime": "17:43",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=206433%2F69061%2F324560%2F93470%2F80%3Fdate%3D2019-08-16%26station_evaId%3D8000014%26station_type%3Ddep%26format%3Djson%26"
+            }
+          },
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "time": "17:48",
+              "date": "2019-08-16",
+              "track": "2",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "time": "17:48",
+              "date": "2019-08-16",
+              "track": "H",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Buss 2",
+            "sname": "2",
+            "journeyNumber": "44",
+            "type": "BUS",
+            "id": "9015014675200044",
+            "direction": "Hede station",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "routeIdx": "4",
+              "time": "17:48",
+              "date": "2019-08-16",
+              "track": "H",
+              "rtTime": "17:48",
+              "rtDate": "2019-08-16",
+              "Notes": {
+                "Note": {
+                  "key": "disruption-message",
+                  "severity": "normal",
+                  "priority": "1",
+                  "$": "Linje 2 och 720 stannar inte vid Kungsmässan. Närmaste hållplats är Kungsbacka station. Detta gäller från 15 maj klockan 23:00 till 15 maj 2020. Orsaken är vägarbete."
+                }
+              }
+            },
+            "Destination": {
+              "name": "Kungsbacka sjukhus, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019135001",
+              "routeIdx": "7",
+              "time": "17:52",
+              "date": "2019-08-16",
+              "track": "A",
+              "rtTime": "17:52",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=628020%2F233760%2F733938%2F157632%2F80%3Fdate%3D2019-08-16%26station_evaId%3D19110012%26station_type%3Ddep%26format%3Djson%26"
+            }
+          }
+        ]
+      },
+      {
+        "Leg": [
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Centralstationen, Göteborg",
+              "type": "ST",
+              "id": "9022014001950005",
+              "time": "17:47",
+              "date": "2019-08-16",
+              "track": "E",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "time": "17:51",
+              "date": "2019-08-16",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Öresundståg",
+            "sname": "TÅG",
+            "journeyNumber": "1105",
+            "type": "REG",
+            "id": "9015030110101105",
+            "direction": "Malmö Köpenhamn",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Göteborg Central, Göteborg",
+              "type": "ST",
+              "id": "9022014008000014",
+              "routeIdx": "0",
+              "time": "17:55",
+              "date": "2019-08-16",
+              "rtTime": "17:55",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "routeIdx": "2",
+              "time": "18:13",
+              "date": "2019-08-16",
+              "track": "2",
+              "rtTime": "18:13",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=894426%2F308686%2F952408%2F178062%2F80%3Fdate%3D2019-08-16%26station_evaId%3D8000014%26station_type%3Ddep%26format%3Djson%26"
+            }
+          },
+          {
+            "name": "Gå",
+            "type": "WALK",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110002",
+              "time": "18:18",
+              "date": "2019-08-16",
+              "track": "2",
+              "$": "\n"
+            },
+            "Destination": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "time": "18:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "$": "\n"
+            }
+          },
+          {
+            "name": "Buss 2",
+            "sname": "2",
+            "journeyNumber": "46",
+            "type": "BUS",
+            "id": "9015014675200046",
+            "direction": "Hede station",
+            "fgColor": "#00A5DC",
+            "bgColor": "#ffffff",
+            "stroke": "Solid",
+            "Origin": {
+              "name": "Kungsbacka station, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019110012",
+              "routeIdx": "4",
+              "time": "18:18",
+              "date": "2019-08-16",
+              "track": "H",
+              "rtTime": "18:18",
+              "rtDate": "2019-08-16",
+              "Notes": {
+                "Note": {
+                  "key": "disruption-message",
+                  "severity": "normal",
+                  "priority": "1",
+                  "$": "Linje 2 och 720 stannar inte vid Kungsmässan. Närmaste hållplats är Kungsbacka station. Detta gäller från 15 maj klockan 23:00 till 15 maj 2020. Orsaken är vägarbete."
+                }
+              }
+            },
+            "Destination": {
+              "name": "Kungsbacka sjukhus, Kungsbacka",
+              "type": "ST",
+              "id": "9022014019135001",
+              "routeIdx": "7",
+              "time": "18:22",
+              "date": "2019-08-16",
+              "track": "A",
+              "rtTime": "18:22",
+              "rtDate": "2019-08-16",
+              "$": "\n"
+            },
+            "JourneyDetailRef": {
+              "ref": "https://api.vasttrafik.se/bin/rest.exe/v2/journeyDetail?ref=567387%2F213543%2F122612%2F127836%2F80%3Fdate%3D2019-08-16%26station_evaId%3D19110012%26station_type%3Ddep%26format%3Djson%26"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
