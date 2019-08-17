@@ -1,0 +1,28 @@
+.CharacterChooseView {
+  min-height: 100vh;
+  background-color: #EEE;
+
+  .CharacterChoose {
+    display: flex;
+    flex-direction: row;
+
+    &__character {
+      margin: 25px;
+      padding: 10px;
+      flex: 1 1 100%;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
+      background-color: #FFF;
+      border-radius: 3px;
+    }
+
+    &__character-name {
+      font-weight: bold;
+    }
+
+    &__character-preferences {
+      list-style: none;
+      text-indent: 0;
+      padding: 0;
+    }
+  }
+}

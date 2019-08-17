@@ -1,15 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-//import vasttrafikData from Vasttrafik eller något
+import React from 'react';
 import DeckGL from '@deck.gl/react';
-import {LineLayer} from '@deck.gl/layers';
 import {StaticMap} from 'react-map-gl';
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import {PolygonLayer} from '@deck.gl/layers';
 import {TripsLayer} from '@deck.gl/geo-layers';
+import {PhongMaterial} from 'luma.gl';
+
+const DATA_URL = {
+  TRIPS:
+  'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/trips/trips-v7.json',
+};
 
 // Set your mapbox access token here
-const MAPBOX_ACCESS_TOKEN = 'sk.eyJ1IjoibnVjdWxhaXMiLCJhIjoiY2p6ZTk4b2lmMDAzNDNjbW1wNGh5ZTJ0MyJ9.4TX9WmhM3V6XQXjv1S2M1g';
+const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoibnVjdWxhaXMiLCJhIjoiY2p6ZTh1NTZ1MDFxNzNpdXB1bXY4cW1iYSJ9.eoNpd9ot4QNJUndc0eqY4w';
 //Default public token: pk.eyJ1IjoibnVjdWxhaXMiLCJhIjoiY2p6ZTh1NTZ1MDFxNzNpdXB1bXY4cW1iYSJ9.eoNpd9ot4QNJUndc0eqY4w
 //Trainhack2019-token: sk.eyJ1IjoibnVjdWxhaXMiLCJhIjoiY2p6ZTk4b2lmMDAzNDNjbW1wNGh5ZTJ0MyJ9.4TX9WmhM3V6XQXjv1S2M1g
 
@@ -24,8 +27,8 @@ const INITIAL_VIEW_STATE = {
 
 //The actual trips
 const DATA = {
-  TRIPS: //JSON med data med koordinater och timestamps
-}
+  TRIPS: []//JSON med data med koordinater och timestamps
+};
 
 //outer corner boundaries for the map [longitude,latitude]
 const landCover = [[[11.756911, 57.570793], [12.308102, 57.570793], [12.308102, 57.854212], [11.756911, 57.854212]]];
@@ -64,7 +67,7 @@ const DEFAULT_THEME = {
 };
 
 
-export class Visualize extends React.Component {
+export default class Visualize extends React.Component {
   constructor(props) {
     super(props);
       //this.state = status:'INITIAL'
@@ -156,17 +159,9 @@ export class Visualize extends React.Component {
          reuseMaps
          mapStyle={mapStyle}
          preventStyleDiffing={true}
-         mapboxApiAccessToken={MAPBOX_TOKEN}
+         mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
        />
      </DeckGL>
    );
  }
 }
-
-export function renderToDOM(container) {
- render(<App />, container); //Kolla detta, ska det vara Visualize
-}
-
- //update() {
-
- //}
