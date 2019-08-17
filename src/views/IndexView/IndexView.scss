@@ -1,9 +1,5 @@
 @import '../../styles/variables';
 
-html {
-  perspective: 1000px;
-}
-
 .IndexView {
   min-height: 100vh;
   background-color: #E0E1E2;
@@ -14,18 +10,19 @@ html {
   justify-content: center;
 
   img {
-    margin-top: -25px;
     width: 50%;
+    margin-top: -25px;
     transition: all 2s;
     transform: translateX(0) translateY(0);
     cursor: pointer;
 
-    &:hover {
-      transform: translateX(-300px) translateY(100px);
-    }
+    // &:hover {
+    //   transform: translateX(-300px) translateY(100px);
+    // }
   }
 
   &__text {
-
+    width: 80%;
+    text-align: right;
   }
 }

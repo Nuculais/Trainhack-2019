@@ -6,9 +6,11 @@ import {PolygonLayer} from '@deck.gl/layers';
 import {TripsLayer} from '@deck.gl/geo-layers';
 import {PhongMaterial} from 'luma.gl';
 
+// import vasttrafikData from '../../live_data.json'
+
 const DATA_URL = {
   TRIPS:
-  'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/trips/trips-v7.json',
+  '/live_data.json',
 };
 
 // Set your mapbox access token here
@@ -27,7 +29,7 @@ const INITIAL_VIEW_STATE = {
 
 //The actual trips
 const DATA = {
-  TRIPS: []//JSON med data med koordinater och timestamps
+  TRIPS: [], //vasttrafikData,//JSON med data med koordinater och timestamps
 };
 
 //outer corner boundaries for the map [longitude,latitude]
@@ -60,6 +62,14 @@ const material = new PhongMaterial({
 
 const DEFAULT_THEME = {
   buildingColor: [74, 80, 87],
+  vendorColor: {
+    0: [253, 128, 93],
+    1: [23, 184, 190],
+    2: [255, 238, 88],
+    3: [76, 175, 80],
+    4: [103, 58, 183],
+    5: [255, 152, 0],
+  },
   trailColor0: [253, 128, 93],
   trailColor1: [23, 184, 190],
   material,
@@ -68,100 +78,158 @@ const DEFAULT_THEME = {
 
 
 export default class Visualize extends React.Component {
-  constructor(props) {
-    super(props);
-      //this.state = status:'INITIAL'
-      this.state = {
-        time: 0
-    };
-  }
+  state = {
+    time: 0,
+  };
+
+  map = null;
+
+  _mapRef = (node) => {
+    console.warn({
+      mapRef: node,
+    });
+
+    this.map = node.getMap();
+
+    this.map.on('load', () => {
+      this._addBuildingsLayer();
+    });
+  };
 
   componentDidMount() {
-     //this.setState({
-       //status: 'LOADED'
-   //}).catch(() => {
-     //this.setState({
-       //status: 'ERROR'
-     //})
-   //})
-   this._animate();
- }
+    this._animate();
+  }
 
- componentWillUnmount() {
-   if (this._animationFrame) {
-     window.cancelAnimationFrame(this._animationFrame);
-   }
- }
+  componentWillUnmount() {
+    if (this._animationFrame) {
+      window.cancelAnimationFrame(this._animationFrame);
+    }
+  }
 
- _animate() {
-   const {
-     loopLength = 1800, // unit corresponds to the timestamp in source data VERIFIERA
-     animationSpeed = 30 // unit time per second VERIFIERA
-   } = this.props;
-   const timestamp = Date.now() / 1000; //Det är lite fördröjning va?
-   const loopTime = loopLength / animationSpeed;
+  _animate() {
+    const {
+      loopLength = 1800, // unit corresponds to the timestamp in source data VERIFIERA
+      animationSpeed = 30 // unit time per second VERIFIERA
+    } = this.props;
 
-   this.setState({
-     time: ((timestamp % loopTime) / loopTime) * loopLength
-   });
-   this._animationFrame = window.requestAnimationFrame(this._animate.bind(this));
- }
+    const timestamp = Date.now() / 1000; //Det är lite fördröjning va?
+    const loopTime = loopLength / animationSpeed;
 
- _renderLayers() {
-   const {
-     trips = DATA_URL.TRIPS,
-     trailLength = 180,
-     theme = DEFAULT_THEME
-   } = this.props;
+    this.setState(() => ({
+      time: ((timestamp % loopTime) / loopTime) * loopLength
+    }));
+    this._animationFrame = window.requestAnimationFrame(this._animate.bind(this));
+  }
 
-   return [
-     // This is only needed when using shadow effects
-     new PolygonLayer({
-       id: 'ground',
-       data: landCover,
-       getPolygon: f => f,
-       stroked: false,
-       getFillColor: [0, 0, 0, 0]
-     }),
-     new TripsLayer({
-       id: 'trips',
-       data: trips,
-       getPath: d => d.path,
-       getTimestamps: d => d.timestamps,
-       getColor: d => (d.vendor === 0 ? theme.trailColor0 : theme.trailColor1), //Kolla detta!
-       opacity: 0.3,
-       widthMinPixels: 2,
-       rounded: true,
-       trailLength,
-       currentTime: this.state.time, //Kolla detta!
+  _renderLayers() {
+    const {
+      trips = DATA_URL.TRIPS,
+      trailLength = 180,
+      theme = DEFAULT_THEME
+    } = this.props;
 
-       shadowEnabled: false
-     }),
-   ];
- }
+    return [
+      // This is only needed when using shadow effects
+      new PolygonLayer({
+        id: 'ground',
+        data: landCover,
+        getPolygon: f => f,
+        stroked: false,
+        getFillColor: [0, 0, 0, 0]
+      }),
+      new TripsLayer({
+        id: 'trips',
+        data: trips,
+        getPath: d => d.path,
+        getTimestamps: d => d.timestamps,
+        getColor: d => theme.vendorColor[d.vendor],
+        opacity: 0.3,
+        widthMinPixels: 2,
+        rounded: true,
+        trailLength,
+        currentTime: this.state.time, //Kolla detta
+        shadowEnabled: false,
+      }),
+    ];
+  }
 
- render() {
-   const {
-     viewState,
-     mapStyle = 'mapbox://styles/mapbox/dark-v9',
-     theme = DEFAULT_THEME
-   } = this.props;
+  _addBuildingsLayer = () => {
+    const map = this.map;
 
-   return (
-     <DeckGL
-       layers={this._renderLayers()}
-       effects={theme.effects}
-       initialViewState={INITIAL_VIEW_STATE}
-       viewState={viewState}
-       controller={true}
-     >
-       <StaticMap
-         reuseMaps
-         mapStyle={mapStyle}
-         preventStyleDiffing={true}
-         mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
-       />
-     </DeckGL>
-   );
- }
+    const layers = map.getStyle().layers;
+
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+      if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+        labelLayerId = layers[i].id;
+        break;
+      }
+    }
+
+    map.addLayer({
+      'id': '3d-buildings',
+      'source': 'composite',
+      'source-layer': 'building',
+      'filter': ['==', 'extrude', 'true'],
+      'type': 'fill-extrusion',
+      'minzoom': 15,
+      'paint': {
+        'fill-extrusion-color': '#aaa',
+
+        // use an 'interpolate' expression to add a smooth transition effect to the
+        // buildings as the user zooms in
+        'fill-extrusion-height': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          15,
+          0,
+          15.05,
+          [
+            'get',
+            'height'
+          ],
+        ],
+        'fill-extrusion-base': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          15,
+          0,
+          15.05,
+          [
+            'get',
+            'min_height'
+          ],
+        ],
+        'fill-extrusion-opacity': .6
+      },
+    }, labelLayerId);
+  };
+
+  render() {
+    const {
+      viewState,
+      mapStyle = 'mapbox://styles/mapbox/dark-v9',
+      theme = DEFAULT_THEME,
+    } = this.props;
+
+    return (
+      <DeckGL
+        layers={this._renderLayers()}
+        effects={theme.effects}
+        initialViewState={INITIAL_VIEW_STATE}
+        viewState={viewState}
+        controller={true}
+      >
+        <StaticMap
+          ref={this._mapRef}
+          mapStyle={mapStyle}
+          reuseMaps
+          preventStyleDiffing={true}
+          mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
+        />
+      </DeckGL>
+    );
+  }
 }
